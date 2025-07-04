@@ -1,0 +1,6 @@
+<form (ngSubmit)="enviar()" #miForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type ="text" id="name" formControlName="name" required[(ngModel)]="name"/>
+  </div>
+  <button type="submit">Submit</button>
