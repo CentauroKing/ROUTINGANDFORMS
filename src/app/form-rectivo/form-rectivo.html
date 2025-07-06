@@ -1,1 +1,27 @@
-<p>form-rectivo works!</p>
+<div style="text-align: center;">
+    
+  <h1><p>Estas en el Super Formulario</p></h1>
+<form [formGroup]="datosForm" (submit)="enviar()">
+    <label  class="text-secondary">Nombre:</label>
+    <input  type="text" placeholder="Aquí tu nombre" formControlName="nombre" required />
+    <br />
+    <label class="text-secondary">Correo Electrónico:</label>
+    <input placeholder="Aquí tu nombre@correo.com" type="email" formControlName="mail" required />
+    <br /><br />
+    <button type="submit"  [disabled]="datosForm.invalid">Enviar</button>
+</form>
+
+<h2 class="text-primary">Datos del Formulario</h2>
+    <span class="text-secondary" style="margin-right: 5px;">Nombre:</span>
+    <span class="text-success">{{ datosForm.value.nombre }}</span><br />
+    <span class="text-secondary" style="margin-right: 5px;">Correo Electrónico:</span>
+    <span class="text-success">{{ datosForm.value.mail }}</span>
+<ul style="text-align: center;">
+    <p>Lista de Nombres y Correos registrados:</p>
+    @for (nombres of listaNombres; track $index) {
+     <li class="text-success">
+          Nombre: {{nombres.nombre}} - Correo Electrónico: {{nombres.mail}}
+     </li>
+    } 
+</ul>
+</div>

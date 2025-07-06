@@ -1,6 +1,14 @@
-<form (ngSubmit)="enviar()" #miForm="ngForm">
-  <div>
-    <label for="name">Name:</label>
-    <input type ="text" id="name" formControlName="name" required[(ngModel)]="name"/>
-  </div>
-  <button type="submit">Submit</button>
+<form (ngSubmit)= "enviar()" #miForm="ngForm" >
+  
+  <h1><p>Estas en Formulario Normal</p></h1>
+    <label >Nombre:
+        <input type="text" name="name" [(ngModel)]="name" required [(ngModel)]="name" #nameInput="ngModel" />
+    </label>
+    <input type="submit" value="Enviar" [disabled]="!miForm.valid" />
+</form>
+<ul>
+  <p>Lista de Nombres registrados:</p>
+    @for (item of names; track $index) {
+        <li>{{item}}</li>
+    }
+</ul>

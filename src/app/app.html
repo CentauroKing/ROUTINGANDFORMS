@@ -1,20 +1,16 @@
-
-
 <main class="main">
-  <div class="content">
-    <div class="left-side">
-     <p></p>
-      <h1> {{ title }}</h1>
-      <nav>
-        <ul>
-          <li><a routerLink="/form-normal">Formulario Normal</a></li>
-          <li><a routerLink="/form-reactive">Formulario Reactivo</a></li>
-        </ul>
-        </nav>
-        <p>Rutas y Formularios</p>  
-    </div>    
-  </div>
-</main>
+</main>  
 
+<p></p>
+<nav class="navbar">
+  <h1> {{ title }}</h1>
+  <h2 class="text-primary">Elije un Formulario</h2>
 
+  <span class="text-secondary" style="margin-right: 5px;"><a routerLink="/form-normal">Formulario Normal</a>&nbsp;|&nbsp;<a routerLink="/form-rectivo">Super Formulario (Reactivo)</a></span>
+  
+  
+  </nav>
+ 
+<br />
+  <br />
 <router-outlet />

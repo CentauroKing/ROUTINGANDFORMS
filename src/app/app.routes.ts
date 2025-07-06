@@ -5,12 +5,12 @@ import { FormRectivo } from './form-rectivo/form-rectivo';
 
 
 export const routes: Routes = [
-{path: '',
+{path: 'form-normal',
     title: 'Fomulario Normal',
     component: FormNormal,
 },
-{path: 'form-reactive',
-    title: 'Fomulario Reactivo',
+{path: 'form-rectivo',
+    title: 'Super Fomulario (Reactivo)',
     component: FormRectivo,
 },
 
